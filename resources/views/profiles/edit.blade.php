@@ -60,7 +60,10 @@
         </div>
         <div class="row pt-5">
             <div class="col-8 offset-2">
-                <button class="btn btn-primary ">Add New Post</button>
+                <button class="btn btn-primary ">Edit Profil</button>
+                <button class="btn btn-primary ">
+                    <a href="/profile/{{$user->id}}" class="text-light text-decoration-none">Cancel</a>
+                </button>
             </div>
         </div>
     </div>

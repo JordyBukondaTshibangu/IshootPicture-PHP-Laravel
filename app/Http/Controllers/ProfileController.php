@@ -24,6 +24,8 @@ class ProfileController extends Controller
 
         $this->authorize('update', $user->profil);
 
+        // dd($user->id);
+
         return view('profiles.edit', compact('user'));
     }
 

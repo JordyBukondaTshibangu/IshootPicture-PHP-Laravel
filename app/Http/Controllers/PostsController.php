@@ -19,6 +19,8 @@ class PostsController extends Controller
         $user = auth()->user()->id;
         $posts = Post::whereIn('user_id', $users)->latest()->paginate(10);
 
+        // dd($posts);
+
         return view('posts.index', compact('posts', 'user'));
     }
 
