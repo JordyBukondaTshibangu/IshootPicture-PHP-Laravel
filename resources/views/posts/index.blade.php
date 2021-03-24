@@ -2,6 +2,18 @@
 
 @section('content')
     <div class="container">
+        <div class="row justify-content-center">
+            <div class="d-flex justify-content-start mx-5">
+                <button class="btn btn-info">
+                    <a href="/posts/create" class="text-light text-decoration-none px-5">Add Post</a>
+                </button>
+            </div>
+            <div class="d-flex justify-content-end mx-5">
+                <button class="btn btn-primary">
+                    <a href="/profile/{{$user}}" class="text-light px-5 text-decoration-none">View my profil</a>
+                </button>
+            </div>
+        </div>
         @foreach ($posts as $post)
             <div class="row">
                 <div class="col-6 offset-3">
