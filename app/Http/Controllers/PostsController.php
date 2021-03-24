@@ -35,10 +35,11 @@ class PostsController extends Controller
         
         $pathName = request('image')->store('uploads', 'public');
 
+        
         $image = Image::make(public_path("storage/$pathName"))->fit(1200,1200);
         $image->save();
 
-        auth()->user()->posts()->create([
+        $post = auth()->user()->posts()->create([
             'caption' => $data['caption'],
             'image' => $pathName
         ]);
