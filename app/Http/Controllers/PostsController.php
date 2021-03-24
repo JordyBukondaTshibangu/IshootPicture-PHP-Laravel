@@ -17,7 +17,10 @@ class PostsController extends Controller
     {
         $users = auth()->user()->following()->pluck('profils.user_id');
         $user = auth()->user()->id;
-        $posts = Post::whereIn('user_id', $users)->latest()->paginate(10);
+        $posts = Post::all();
+
+        // dd($posts);
+        // $posts = Post::whereIn('user_id', $users)->latest()->paginate(10);
 
         // dd($posts);
 
